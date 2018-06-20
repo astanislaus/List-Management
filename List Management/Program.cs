@@ -48,11 +48,25 @@ namespace ConsoleApplication1
                 }
                 //  Substring(2)
 
-                // print the full list
+                // need an if Statment to check whether the list has anything in it
+                if (Groceries.Count == 0) 
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Your list is empty");
+                    Console.WriteLine();
 
-                Groceries.ForEach(Console.WriteLine);
+                }
+                else {
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Here is what I've remembered : ");
 
+                    // print the full list
+                    Groceries.ForEach(Console.WriteLine);
+                }
 
+                Console.WriteLine();
+                Console.WriteLine();
                 Console.Write("Enter command (+ item, - item, or -- to clear)): ");
 
                 SelectionStr = Console.ReadLine();
